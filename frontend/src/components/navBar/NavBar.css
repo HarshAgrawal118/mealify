@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+.navbar .logo{
+    width: 140px;
+}
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    
+    font-family: outfit;
+    cursor: pointer;
+    font-size: 18px;
+}
+.navbar-menu Link,a{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(103, 130, 154);
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar-right button{
+    width: 100px;
+    /* border: none; */
+    background-color: transparent;
+    outline: none;
+    padding: 10px 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.navbar-right button:hover{
+    background-color: rgb(219, 237, 252);
+}
+.navbar .navbar-menu .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid tomato;
+}
+.navbar-search_icon{
+    position: relative;
+}
+.navbar-search_icon .dot{
+    position: absolute;
+    background-color: tomato;
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 8px;
+    top: -8px;
+    right: -8px;
+}
+.navbar-profile{
+    position: relative;
+}
+.nav-profile-dropdown{
+   position: absolute;
+   display: none;
+   right: 0;
+   z-index: 1;
+}
+.navbar-profile:hover .nav-profile-dropdown{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #a9abd3;
+  padding: 12px 25px;
+  border-radius: 4px;
+  border: 1px solid rgb(150, 145, 145);
+  outline: 2px solid white;
+  list-style: none;
+}
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.nav-profile-dropdown img{
+    width: 20px;
+}
+.nav-profile-dropdown li:hover{
+    color: rgb(242, 217, 217);
+}
+@media(max-width:1050px){
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+@media(max-width:900px){
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+@media(max-width:750px){
+
+    .navbar-menu{
+        display: none;
+    }
+
+}
